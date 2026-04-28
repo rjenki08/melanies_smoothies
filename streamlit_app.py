@@ -1,5 +1,5 @@
 import streamlit as st
-from snowflake.snowpark.context import cnx
+from snowflake.snowpark.context import cnx = st.connection("snowflake")
 from snowflake.snowpark.functions import col
 
 # Write directly to the app.
@@ -45,7 +45,6 @@ if time_to_insert:
 
         st.success(f"Your Smoothie is ordered, Order name: {name_on_order}", icon='✅')
   
-cnx = st.connection("snowflake")
 
 
 
