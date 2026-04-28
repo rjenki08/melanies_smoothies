@@ -1,4 +1,5 @@
 import streamlit as st
+from snowflake.snowpark.context import cnx.session
 from snowflake.snowpark.functions import col
 
 # Write directly to the app.
