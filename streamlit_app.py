@@ -47,8 +47,8 @@ if ingredients_list:
        )
 
 
-st.dataframe(pd_df)
-st.stop()
+#st.dataframe(pd_df)
+#st.stop()
 
 
       
