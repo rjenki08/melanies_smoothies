@@ -4,7 +4,7 @@ from snowflake.snowpark.functions import col
 import requests 
 import pandas as pd
 
-pd_df=my_dataframe.to_pandas()
+
 cnx = st.connection("snowflake")
 session = cnx.session()
 
@@ -20,7 +20,7 @@ st.write("The name on your Smoothie will be:", name_on_order)
 
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'), col('SEARCH_ON'))
 
-
+pd_df=my_dataframe.to_pandas()
 
 ingredients_list = st.multiselect(
     "Choose up to 5 ingredients:",
